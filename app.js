@@ -16,6 +16,7 @@ const serverExpress = app.listen(PORT, ()=>{
     console.log(`el servido esta escuchando en el puerto ${PORT}`)
 })
 
+//nueva instancia de Product Manager
 const products = productManager.ProductManager
 
 const product = new products()

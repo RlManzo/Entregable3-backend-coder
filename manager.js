@@ -78,7 +78,7 @@ class ProductManager {
 
     };
 
-
+//metodo para obtener id
     async getProductById(productId) {
 
         const products = await this.getProducts(); // Cambio de "productsByID" a "products"
@@ -97,6 +97,7 @@ class ProductManager {
 
     };
 
+//metodo update producto    
     async updateProduct(id, updatedProduct) {
 
         const products = await this.getProducts();
@@ -114,6 +115,8 @@ class ProductManager {
 
     };
 
+
+//metodo delete
     async deleteProduct(productId) {
 
         const products = await this.getProducts(); 
@@ -131,35 +134,5 @@ class ProductManager {
 };
 
 
-
-//Test de instancia de ProductManager
-/*
-const product = new ProductManager();
-
-product.addProduct("arroz", "marolio", 200, "sin imagen", 123213, 10);
-
-product.addProduct("yerba", "marolio", 500, "sin imagen", 121344, 5);
-
-product.getProducts();
-
-product.getProductById(1);
-
-product.updateProduct(3, {
-
-  title: "fideos",
-
-  description: "303",
-
-  price: 510,
-
-  thumbnail: "sin imagen",
-
-  code: 412444,
-
-  stock: 5,
-
-});
-
-product.deleteProduct(1)*/
 
 module.exports.ProductManager = ProductManager
